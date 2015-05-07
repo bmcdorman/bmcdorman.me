@@ -1,5 +1,211 @@
-extends layout
+doctype html
 
-block content
-  h1= title
-  p Welcome to #{title}
+html
+  head
+    title Braden McDorman
+    
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    //if lte IE 8
+      script(src='css/ie/html5shiv.js')
+    
+    script(src='js/jquery.min.js')
+    script(src='js/jquery.scrolly.min.js')
+    script(src='js/jquery.scrollzer.min.js')
+    script(src='js/skel.min.js')
+    script(src='js/skel-layers.min.js')
+    script(src='js/init.js')
+    
+    noscript
+      link(rel='stylesheet', href='css/skel.css')
+      
+      link(rel='stylesheet', href='css/style.css')
+      
+      link(rel='stylesheet', href='css/style-wide.css')
+    //if lte IE 9
+      link(rel='stylesheet', href='css/ie/v9.css')
+    //if lte IE 8
+      link(rel='stylesheet', href='css/ie/v8.css')
+  
+  body
+    // Header
+    #header.skel-layers-fixed
+      .top
+        // Logo
+        #logo
+          span.image.avatar48
+            img(src='images/avatar.jpg', alt='')
+          
+          h1#title Braden McDorman
+          
+          p PhD Student, Software Engineer
+        // Nav
+        nav#nav
+          //
+            Prologue's nav expects links in one of two formats:
+            1. Hash link (scrolls to a different section within the page)
+            <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+            2. Standard link (sends the user to another page/site)
+            <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+          ul
+            li
+              a#top-link.skel-layers-ignoreHref(href='#top')
+                span.icon.fa-home Intro
+            
+            li
+              a#portfolio-link.skel-layers-ignoreHref(href='#research')
+                span.icon.fa-th Research
+            
+            li
+              a#about-link.skel-layers-ignoreHref(href='#about')
+                span.icon.fa-user About Me
+            
+            li
+              a#contact-link.skel-layers-ignoreHref(href='#contact')
+                span.icon.fa-envelope Contact
+      
+      
+      .bottom
+        // Social Icons
+        ul.icons
+          li
+            a.icon.fa-facebook(href='https://www.facebook.com/beta0')
+              span.label Facebook
+          li
+            a.icon.fa-github(href='https://github.com/bmcdorman')
+              span.label Github
+          li
+            a.icon.fa-envelope(href='mailto:bmcdorman@gmail.com')
+              span.label Email
+    // Main
+    #main
+      // Intro
+      section#top.one.dark.cover
+        .container
+          header
+            h2.alt Braden McDorman
+            
+            p
+              | PhD Student at The University of Southern California
+              br
+              
+          
+          
+          footer
+            a.button.scrolly(href='#research') Research
+      // Portfolio
+      section#research.two
+        .container
+          header
+            h2 Research
+          
+          
+          p
+            | Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
+            | egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
+            | Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
+            | fusce hendrerit lacus ridiculus.
+          
+          
+          .row
+            .4u
+              article.item
+                a.image.fit(href='#')
+                  img(src='images/pic02.jpg', alt='')
+                
+                header
+                  h3 Ipsum Feugiat
+              
+              article.item
+                a.image.fit(href='#')
+                  img(src='images/pic03.jpg', alt='')
+                
+                header
+                  h3 Rhoncus Semper
+            
+            .4u
+              article.item
+                a.image.fit(href='#')
+                  img(src='images/pic04.jpg', alt='')
+                
+                header
+                  h3 Magna Nullam
+              
+              article.item
+                a.image.fit(href='#')
+                  img(src='images/pic05.jpg', alt='')
+                
+                header
+                  h3 Natoque Vitae
+            
+            .4u
+              article.item
+                a.image.fit(href='#')
+                  img(src='images/pic06.jpg', alt='')
+                
+                header
+                  h3 Dolor Penatibus
+              
+              article.item
+                a.image.fit(href='#')
+                  img(src='images/pic07.jpg', alt='')
+                
+                header
+                  h3 Orci Convallis
+      // About Me
+      section#about.three
+        .container
+          header
+            h2 About Me
+          
+          a.image.featured(href='#')
+            img(src='images/hiking.jpg', alt='')
+          
+          
+          p
+            | Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
+            | ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
+            | laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
+            | parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
+            | dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
+            | ornare iaculis.
+      
+      
+      
+      // Contact
+      section#contact.four
+        .container
+          header
+            h2 Contact
+          
+          p
+            | Elementum sem parturient nulla quam placerat viverra
+            | mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
+            | donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
+            | orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.
+          
+          
+          form(method='post', action='#')
+            .row(class='50%')
+              .6u
+                input(type='text', name='name', placeholder='Name')
+              
+              .6u
+                input(type='text', name='email', placeholder='Email')
+            
+            .row(class='50%')
+              .12u
+                textarea(name='message', placeholder='Message')
+            
+            .row
+              .12u
+                input(type='submit', value='Send Message')
+    // Footer
+    #footer
+      // Copyright
+      ul.copyright
+        li &copy; Braden McDorman. All rights reserved.
+        li
+          | Design: 
+          a(href='http://html5up.net') HTML5 UP
