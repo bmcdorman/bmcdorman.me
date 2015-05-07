@@ -8,6 +8,20 @@ var app = require('../app');
 var debug = require('debug')('bmcdorman.me:server');
 var http = require('http');
 
+process.on('SIGTERM', function() {
+    console.log('SIGTERM')
+    // do whatever to terminate properly
+    // at worst, just 'exit(0)'
+    process.exit(0)
+});
+
+process.on('SIGINT', function() {
+    console.log('SIGINT')
+    // do whatever to terminate properly
+    // at worst, just 'exit(0)'
+    process.exit(0)
+});
+
 /**
  * Get port from environment and store in Express.
  */
